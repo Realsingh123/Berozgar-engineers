@@ -3,6 +3,9 @@ import Technologies from './Pages/Technologies'
 import HeroBrand from './Pages/Hero'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WhyChooseUs from './Pages/whyChooseUs'
+import OurWork from './Pages/OurWork'
+import StartJourney from './Pages/StartJourney'
 
 const App = () => {
   return (
@@ -10,6 +13,9 @@ const App = () => {
     <Navbar />
     <HeroBrand/>
     <Technologies/>
+    <WhyChooseUs/>
+    <OurWork/>
+    <StartJourney/>
     <Footer />
     </>
   )
