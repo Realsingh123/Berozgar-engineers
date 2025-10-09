@@ -7,6 +7,7 @@ import WhyChooseUs from './Pages/whyChooseUs'
 import OurWork from './Pages/OurWork'
 import StartJourney from './Pages/StartJourney'
 import TestimonialSection from './pages/TestimonialSection'
+import FaqSection from './Pages/Faqsection'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
     <OurWork/>
     <TestimonialSection />
     <StartJourney/>
+    <FaqSection/>
     <Footer />
     </>
   )
