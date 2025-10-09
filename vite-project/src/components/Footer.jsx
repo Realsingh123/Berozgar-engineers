@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-gray-800">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left">
         {/* Left Section - Logo + Socials + Button */}
         <div className="flex flex-col items-center md:items-start space-y-6 mx-auto">
           {/* Logo */}
@@ -31,15 +31,15 @@ const Footer = () => {
         </div>
 
         {/* Center Section - Links Column 1 & 2 */}
-        <div className="grid grid-cols-2 justify-center gap-24 text-sm font-medium mx-auto">
-          <ul className="space-y-5">
+        <div className="grid grid-cols-2 justify-center gap-20 text-sm font-medium mx-auto ml-16">
+          <ul className="space-y-6">
             <li className="hover:text-[#487BFF] cursor-pointer transition">Work With Us</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Advertise With Us</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Support Us</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Business Advices</li>
           </ul>
 
-          <ul className="space-y-5">
+          <ul className="space-y-6">
             <li className="hover:text-[#487BFF] cursor-pointer transition">Private Coaching</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Our Work</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Our Commitment</li>
@@ -47,9 +47,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Right Section - More Links */}
-        <div className="flex justify-center md:justify-start">
-          <ul className="space-y-5 text-sm font-medium">
+       {/* Right Section - More Links */}
+        <div className="flex justify-center ml-16 md:justify-start">
+          <ul className="space-y-6 text-sm font-medium">
             <li className="hover:text-[#487BFF] cursor-pointer transition">About Us</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">FAQs</li>
             <li className="hover:text-[#487BFF] cursor-pointer transition">Report a Bug</li>

@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import WhyChooseUs from './Pages/whyChooseUs'
 import OurWork from './Pages/OurWork'
 import StartJourney from './Pages/StartJourney'
+import TestimonialSection from './pages/TestimonialSection'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
     <Technologies/>
     <WhyChooseUs/>
     <OurWork/>
+    <TestimonialSection />
     <StartJourney/>
     <Footer />
     </>
