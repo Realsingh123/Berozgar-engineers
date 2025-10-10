@@ -50,21 +50,21 @@ const StartJourney = () => {
 
   return (
     <section className="w-full flex justify-center py-16 bg-gray-50 relative">
-      <div className="flex items-center justify-between w-[1000px] h-[280px] px-16 py-14 rounded-3xl bg-[#1A1732] relative overflow-hidden">
+      <div className="flex items-center justify-between w-[950px] h-[240px] px-14 py-12 rounded-3xl bg-[#1A1732] relative overflow-hidden">
         <div className="flex flex-col gap-6 z-10">
-          <h2 className="text-white text-3xl font-semibold leading-snug">
+          <h2 className="text-white text-2xl font-semibold leading-snug">
             Start Your Journey <br /> With Us Now
           </h2>
           <button
             onClick={() => setShowForm(true)}
-            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-sm h-[40px] w-[200px] px-6 py-2 rounded-full shadow-md transition-all"
+            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-sm h-[30px] w-[120px] px-6 py-1 rounded-full shadow-md transition-all"
           >
             Start Now
           </button>
         </div>
 
-        <div className="flex items-center justify-center bg-[#EFFF00] w-45 h-45 rounded-full">
-          <ArrowUpRight strokeWidth={3} size={100} className="text-[#2563eb]" />
+        <div className="flex items-center justify-center bg-[#EFFF00] w-[150px] h-[150px] rounded-full">
+          <ArrowUpRight strokeWidth={3} size={80} className="text-[#2563eb]" />
         </div>
       </div>
 
