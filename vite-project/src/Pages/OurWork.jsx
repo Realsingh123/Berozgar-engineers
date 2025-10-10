@@ -37,7 +37,7 @@ const OurWork = () => {
         {projects.map((proj, idx) => (
           <div key={idx} className="flex flex-col items-center">
             <div
-              className={`w-48 h-48 rounded-3xl overflow-hidden flex items-center justify-center shadow-lg ${proj.bg}`}
+              className={`w-72 h-48 rounded-3xl overflow-hidden flex items-center justify-center shadow-lg ${proj.bg}`}
             >
               <img
                 src={proj.img}
