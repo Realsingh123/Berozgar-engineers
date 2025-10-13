@@ -23,7 +23,7 @@ const projects = [
 
 const OurWork = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-20 px-6 text-center">
+    <section id="our-work" className="w-full max-w-6xl mx-auto py-20 px-6 text-center">
       {/* Heading */}
       <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-3">
         Our Work
