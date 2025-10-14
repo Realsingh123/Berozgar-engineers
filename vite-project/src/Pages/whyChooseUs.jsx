@@ -1,80 +1,79 @@
-  import React from "react";
-  import team from "../assets/people.jpg";
-  import { Search, Shield, CheckCircle, BarChart } from "lucide-react";
+import React from "react";
+import phoneMockup from "../assets/phone-mockup.png";
+import customerReview from "../assets/customer-review.png";
+import customerService from "../assets/customer-service.png";
+import cyberSecurity from "../assets/cyber-security.png";
+import efficiency from "../assets/efficiency.png";
+import handshake from "../assets/handshake.png";
+import cloudServer from "../assets/cloud-server.png";
 
-  const features = [
-    {
-      icon: <Search className="text-white w-5 h-5" />,
-      title: "Discovery",
-      description:
-        "We dive deep to understand your goals and audience, ensuring every solution is perfectly aligned with your needs.",
-    },
-    {
-      icon: <Shield className="text-white w-5 h-5" />,
-      title: "Strategy",
-      description:
-        "We craft tailored, data-driven strategies designed to accelerate results and give your business the edge it deserves.",
-    },
-    {
-      icon: <CheckCircle className="text-white w-5 h-5" />,
-      title: "Execution",
-      description:
-        "From start to finish, our experts use the latest tech to drive flawless, measurable execution—leaving nothing to guesswork.",
-    },
-    {
-      icon: <BarChart className="text-white w-5 h-5" />,
-      title: "Measurement",
-      description:
-        "Track every milestone with transparent analytics, so you see what’s working and scale what matters most.",
-    },
-  ];
+const features = [
+  {
+    icon: customerReview,
+    title: "Customer Reviews",
+    description: "Genuine feedback from satisfied clients.",
+  },
+  {
+    icon: customerService,
+    title: "Responsive Support",
+    description: "Prompt and friendly customer service.",
+  },
+  {
+    icon: cyberSecurity,
+    title: "Cyber Security",
+    description: "Advanced data protection & confidentiality.",
+  },
+  {
+    icon: efficiency,
+    title: "Efficiency",
+    description: "Fast delivery & optimized results.",
+  },
+  {
+    icon: handshake,
+    title: "Collaboration",
+    description: "Transparent partnerships and reliability.",
+  },
+  {
+    icon: cloudServer,
+    title: "Cloud Solutions",
+    description: "Modern, scalable cloud/server support.",
+  },
+];
 
-  const WhyChooseUs = () => {
-    return (
-      <section className="w-full bg-white py-20 px-8 sm:px-12 md:px-20 lg:px-65">
-        {/* max width + center alignment */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-start gap-12">
-          {/* Left Side (Text + Image) */}
-          <div className="flex flex-col justify-start">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us?
-              </h2>
-              <p className="text-gray-600 text-base leading-relaxed mb-15">
-                Unlock growth with secure, scalable solutions custom-fit for your
-                business. Our team blends expert support and smart automation,
-                making your journey seamless and rewarding.
-              </p>
-            </div>
-
-            <img
-              src={team}
-              alt="Why Choose Us"
-              className="rounded-3xl shadow-lg w-[320px] md:w-[400px] lg:w-[550px] h-auto object-cover mx-auto lg:mx-0"
-            />
-          </div>
-
-          {/* Right Side (Features) */}
-          <div className="flex flex-col gap-10">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-2">
-                <div className="bg-indigo-600 p-5 rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-base leading-snug max-w-md">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+const FeatureGrid = () => (
+  <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:gap-x-14 sm:gap-y-10 w-[85%]">
+    {features.map((f, i) => (
+      <div key={i} className="flex items-start gap-3">
+        <img src={f.icon} alt={f.title} className="w-11 h-11" />
+        <div className="max-w-[170px]">
+          <h3 className="text-[15px] font-semibold text-gray-900 mb-1">
+            {f.title}
+          </h3>
+          <p className="text-gray-600 text-[12px] leading-snug">
+            {f.description}
+          </p>
         </div>
-      </section>
-    );
-  };
+      </div>
+    ))}
+  </div>
+);
 
-  export default WhyChooseUs;
+const WhyChooseUs = () => (
+  <section className="w-full max-w-6xl mx-auto py-20 px-6">
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10">
+      <div className="flex flex-col justify-center items-center lg:items-end w-full lg:w-[46%] pr-0">
+        <img
+          src={phoneMockup}
+          alt="Why Choose Us"
+          className="w-[260px] h-[400px] md:w-[290px] md:h-[430px] lg:w-[310px] lg:h-[450px] object-contain translate-x-[-120px]"
+        />
+      </div>
+
+      <div className="flex-1 flex justify-start lg:pl-0">
+        <FeatureGrid />
+      </div>
+    </div>
+  </section>
+);
+
+export default WhyChooseUs;

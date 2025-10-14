@@ -2,6 +2,9 @@ import React from "react";
 import appleImg from "../assets/apple.jpg";
 import cokeImg from "../assets/coke.jpg";
 import nikeImg from "../assets/nike.jpg";
+import teslaImg from "../assets/tesla.jpg";
+import pepsiImg from "../assets/pepsi.jpg";
+import adidasImg from "../assets/adidas.jpg";
 
 const projects = [
   {
@@ -19,20 +22,32 @@ const projects = [
     img: nikeImg,
     bg: "bg-blue-300",
   },
+  {
+    name: "Tesla",
+    img: teslaImg,
+    bg: "bg-gray-800",
+  },
+  {
+    name: "Pepsi",
+    img: pepsiImg,
+    bg: "bg-blue-700",
+  },
+  {
+    name: "Adidas",
+    img: adidasImg,
+    bg: "bg-gray-200",
+  },
 ];
 
 const OurWork = () => {
   return (
     <section className="w-full max-w-6xl mx-auto py-20 px-6 text-center">
-      {/* Heading */}
       <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-3">
         Our Work
       </h2>
       <p className="text-gray-500 text-base mb-12">
         A glimpse of our portfolio
       </p>
-
-      {/* Work Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center mb-15">
         {projects.map((proj, idx) => (
           <div key={idx} className="flex flex-col items-center">
@@ -51,9 +66,7 @@ const OurWork = () => {
           </div>
         ))}
       </div>
-
-      {/* See More Button */}
-      <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm h-[30px] w-[120px] px-6 py-1 rounded-full shadow-md transition-all">
+      <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm h-[40px] w-[150px] px-6 py-1 rounded-full shadow-md transition-all">
         See More
       </button>
     </section>

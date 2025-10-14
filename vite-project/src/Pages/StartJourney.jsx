@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 
 const SERVICE_ID = "service_7c9u6s9";
 const TEMPLATE_ID = "template_vheifua";
-const PUBLIC_KEY = "NdMmz4aJ-_dRktHkDY";
+const PUBLIC_KEY = "NdMmz4aJ-_dRktHkD";
 
 const StartJourney = () => {
   const [showForm, setShowForm] = useState(false);
