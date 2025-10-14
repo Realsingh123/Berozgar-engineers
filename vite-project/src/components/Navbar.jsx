@@ -8,8 +8,15 @@ const Navbar = () => {
       <div className="text-3xl font-semibold text-gray-800 cursor-pointer">Logo</div>
 
       <ul className="hidden md:flex space-x-8 text-gray-700 text-sm font-medium">
-        <li className="text-lg hover:text-blue-600 cursor-pointer transition">How It Works</li>
-        <li className="text-lg hover:text-blue-600 cursor-pointer transition">Our Work</li>
+        <li 
+  className="text-lg hover:text-blue-600 cursor-pointer transition"
+  onClick={() => {
+    const section = document.getElementById("our-work");
+    section?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Our Work
+</li>
         <li className="text-lg hover:text-blue-600 cursor-pointer transition">Pricing</li>
         <li className="text-lg hover:text-blue-600 cursor-pointer transition">About Us</li>
       </ul>
@@ -36,8 +43,17 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <ul className="absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-4 py-4 shadow-md md:hidden text-gray-700 font-medium">
-          <li className="hover:text-blue-600 cursor-pointer transition">How It Works</li>
-          <li className="hover:text-blue-600 cursor-pointer transition">Our Work</li>
+          <li 
+  className="hover:text-blue-600 cursor-pointer transition"
+  onClick={() => {
+    const section = document.getElementById("our-work");
+    section?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false); // close mobile menu after click
+  }}
+>
+  Our Work
+</li>
+
           <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
           <li className="hover:text-blue-600 cursor-pointer transition">About Us</li>
           <button className="bg-[#487BFF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#3763e2] transition">
