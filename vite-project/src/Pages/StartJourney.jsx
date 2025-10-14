@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
-import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com";
 
-
-const SERVICE_ID = "service_7c9u6s9";
-const TEMPLATE_ID = "template_vheifua";
-const PUBLIC_KEY = "NdMmz4aJ-_dRktHkD";
+const SERVICE_ID = "service_9teojkc";
+const TEMPLATE_ID = "template_gn1u8ie";
+const PUBLIC_KEY = "JAo7Y1cy48wQ_h_Lh";
 
 const StartJourney = () => {
   const [showForm, setShowForm] = useState(false);
@@ -24,27 +23,23 @@ const StartJourney = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setLoading(true);
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
-      .then(
-        () => {
-          alert("✅ Details sent successfully!");
-          setShowForm(false);
-          setFormData({
-            name: "",
-            email: "",
-            company: "",
-            service: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.error("FAILED...", error);
-          alert("❌ Something went wrong, please try again.");
-        }
-      )
+      .then(() => {
+        alert("✅ Details sent successfully!");
+        setShowForm(false);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      })
+      .catch(() => {
+        alert("❌ Something went wrong, please try again.");
+      })
       .finally(() => setLoading(false));
   };
 
@@ -62,12 +57,10 @@ const StartJourney = () => {
             Start Now
           </button>
         </div>
-
         <div className="flex items-center justify-center bg-[#EFFF00] w-[150px] h-[150px] rounded-full">
           <ArrowUpRight strokeWidth={3} size={80} className="text-[#2563eb]" />
         </div>
       </div>
-
       {showForm && (
         <div className="fixed inset-0 flex justify-center items-center z-50 bg-[rgba(255,255,255,0.2)] backdrop-blur-sm transition-all duration-300">
           <div className="relative bg-white/70 backdrop-blur-xl border border-white/30 shadow-2xl p-10 rounded-3xl w-[550px] animate-[fadeIn_0.3s_ease-out]">
@@ -77,11 +70,9 @@ const StartJourney = () => {
             >
               <X size={22} />
             </button>
-
             <h3 className="text-2xl font-semibold text-[#1A1732] mb-6 text-center">
               Let’s Get Started 🚀
             </h3>
-
             <form
               onSubmit={handleSubmit}
               className="flex flex-col gap-5 text-[15px]"
@@ -93,7 +84,7 @@ const StartJourney = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
               />
               <input
                 type="email"
@@ -102,7 +93,7 @@ const StartJourney = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
               />
               <input
                 type="text"
@@ -110,14 +101,19 @@ const StartJourney = () => {
                 placeholder="Company Name"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
               />
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md text-gray-700"
+                className={`w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md appearance-none ${
+                  formData.service
+                    ? "text-gray-700 bg-white"
+                    : "text-gray-500"
+                }`}
+                style={{ color: formData.service ? "#374151" : "#6B7280" }}
               >
                 <option value="">Select Service</option>
                 <option value="Frontend Web Development">
@@ -132,7 +128,7 @@ const StartJourney = () => {
                 placeholder="Tell us about your project..."
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 h-28 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 h-28 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
               />
               <button
                 type="submit"
@@ -145,8 +141,6 @@ const StartJourney = () => {
           </div>
         </div>
       )}
-
-      {/* Smooth Fade Animation */}
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: scale(0.95); }
