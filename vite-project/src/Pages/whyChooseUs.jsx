@@ -1,5 +1,6 @@
 import React from "react";
 import phoneMockup from "../assets/phone-mockup.png";
+import Mockup3 from "../assets/mockup3.png";
 import customerReview from "../assets/customer-review.png";
 import customerService from "../assets/customer-service.png";
 import cyberSecurity from "../assets/cyber-security.png";
@@ -63,7 +64,7 @@ const WhyChooseUs = () => (
     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10">
       <div className="flex flex-col justify-center items-center lg:items-end w-full lg:w-[46%] pr-0">
         <img
-          src={phoneMockup}
+          src={Mockup3}
           alt="Why Choose Us"
           className="w-[260px] h-[400px] md:w-[290px] md:h-[430px] lg:w-[310px] lg:h-[450px] object-contain translate-x-[-120px]"
         />

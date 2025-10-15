@@ -1,4 +1,5 @@
 import React from "react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const avatars = [
   {
@@ -76,7 +77,7 @@ const HeroBrand = () => {
         {/* Right section */}
         <div className="relative md:w-1/2 w-full flex justify-center items-center mt-14 md:mt-0 min-h-[420px]">
     
-          <div className="relative w-[420px] h-[400px]">
+          {/* <div className="relative w-[420px] h-[400px]">
     
             <div className="absolute top-0 left-1/2 -translate-x-1/2">
               <div className="relative w-36 h-36 rounded-[40px] overflow-hidden bg-[#F6F3F2] flex items-center justify-center">
@@ -106,8 +107,26 @@ const HeroBrand = () => {
             <span className="absolute top-44 right-52 bg-black text-2xl rounded-full w-12 h-12 flex items-center justify-center text-white shadow">💪</span>
             <span className="absolute bottom-0 right-32 bg-[#E1FF50] text-2xl rounded-2xl w-24 h-16 flex items-center justify-center shadow">👩‍💻</span>
             <span className="absolute bottom-2 right-0 bg-[#FFD875] text-2xl rounded-full w-16 h-16 flex items-center justify-center shadow">👑</span>
-          </div>
+          </div> */}
+{/* 
+            <DotLottieReact
+      src="https://lottie.host/c1b9f795-6113-402b-8ed6-380484d572ca/qOjf2canO9.lottie"
+      loop
+      autoplay
+    /> */}
+    
+     <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+  <DotLottieReact
+    src="https://lottie.host/e52ec048-476a-4468-9e94-2732988a1755/UFjHuGGzF3.lottie"
+    loop
+    autoplay
+  />
+</div>
+
         </div>
+
+
+       
       </div>
     </section>
   );

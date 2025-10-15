@@ -6,6 +6,7 @@ import teslaImg from "../assets/tesla.jpg";
 import pepsiImg from "../assets/pepsi.jpg";
 import adidasImg from "../assets/adidas.jpg";
 
+
 const projects = [
   {
     name: "Apple",
