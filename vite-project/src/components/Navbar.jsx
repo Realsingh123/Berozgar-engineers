@@ -1,31 +1,35 @@
 import React, { useState } from "react";
+import logoImg from "../assets/tpLogo.png"; 
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between px-8 py-4 shadow-sm bg-white relative">
-      <div className="text-3xl font-semibold text-gray-800 cursor-pointer">Logo</div>
-
+    
+    <nav className="h-20 flex items-center justify-between px-8 shadow-sm bg-white relative">
+      <div className="cursor-pointer flex items-center h-full">
+        <img 
+          src={logoImg} 
+          alt="Logo" 
+          className="h-32 w-auto object-contain"
+        />
+      </div>
       <ul className="hidden md:flex space-x-8 text-gray-700 text-sm font-medium">
-        <li 
-  className="text-lg hover:text-blue-600 cursor-pointer transition"
-  onClick={() => {
-    const section = document.getElementById("our-work");
-    section?.scrollIntoView({ behavior: "smooth" });
-  }}
->
-  Our Work
-</li>
+        <li
+          className="text-lg hover:text-blue-600 cursor-pointer transition"
+          onClick={() => {
+            const section = document.getElementById("our-work");
+            section?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Our Work
+        </li>
         <li className="text-lg hover:text-blue-600 cursor-pointer transition">Pricing</li>
         <li className="text-lg hover:text-blue-600 cursor-pointer transition">About Us</li>
       </ul>
-
       <button className="hidden md:block bg-[#487BFF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#3763e2] transition">
         Book A Call
       </button>
-
-      {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center">
         <button onClick={() => setOpen(!open)} className="text-gray-700 focus:outline-none">
           {open ? (
@@ -39,21 +43,18 @@ const Navbar = () => {
           )}
         </button>
       </div>
-
-      {/* Mobile Menu */}
       {open && (
         <ul className="absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-4 py-4 shadow-md md:hidden text-gray-700 font-medium">
-          <li 
-  className="hover:text-blue-600 cursor-pointer transition"
-  onClick={() => {
-    const section = document.getElementById("our-work");
-    section?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false); // close mobile menu after click
-  }}
->
-  Our Work
-</li>
-
+          <li
+            className="hover:text-blue-600 cursor-pointer transition"
+            onClick={() => {
+              const section = document.getElementById("our-work");
+              section?.scrollIntoView({ behavior: "smooth" });
+              setOpen(false);
+            }}
+          >
+            Our Work
+          </li>
           <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
           <li className="hover:text-blue-600 cursor-pointer transition">About Us</li>
           <button className="bg-[#487BFF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#3763e2] transition">
