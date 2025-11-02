@@ -3,41 +3,42 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Amelia Joseph",
-    title: "Chief Manager",
-    text: "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Aarav Mehta",
+    title: "Content Creator",
+    text: "Their thumbnail designs completely changed the look of my YouTube channel. Each one perfectly captures the vibe of my videos — eye-catching yet professional!",
+    img: "https://randomuser.me/api/portraits/men/75.jpg",
   },
   {
-    name: "Jacob Joshua",
-    title: "Chief Manager",
-    text: "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it’s got to be Embrace!",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    name: "Jacob John",
-    title: "Chief Manager",
-    text: "Embrace really nails it! Creative and approachable style. They understand artistry meets strategy. Thrilled with what we achieved!",
-    img: "https://randomuser.me/api/portraits/men/46.jpg",
-  },
-  {
-    name: "Sophia Wilson",
-    title: "Product Head",
-    text: "They delivered exactly what I envisioned, with outstanding professionalism. I’m amazed at how smooth the whole process was!",
+    name: "Priya Sharma",
+    title: "Marketing Manager",
+    text: "Working with them on our website redesign was an absolute pleasure. The UI/UX feels smooth and intuitive — our clients noticed the difference immediately!",
     img: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
-    name: "David Miller",
-    title: "Marketing Lead",
-    text: "An absolute delight to work with! Highly creative and super reliable — they made the process both fun and productive.",
-    img: "https://randomuser.me/api/portraits/men/68.jpg",
+    name: "Rohan Gupta",
+    title: "Startup Founder",
+    text: "From color schemes to layout, their website design nailed everything. My brand looks more premium now, and conversions have improved too!",
+    img: "https://randomuser.me/api/portraits/men/67.jpg",
   },
   {
-    name: "Emma Brown",
-    title: "Brand Strategist",
-    text: "They turned ideas into reality with a perfect mix of creativity and precision. I’ll definitely collaborate again!",
-    img: "https://randomuser.me/api/portraits/women/55.jpg",
+    name: "Isha Patel",
+    title: "YouTuber & Influencer",
+    text: "They completely understood my brand aesthetic. Every thumbnail they created felt lively and on point — super reliable and creative team!",
+    img: "https://randomuser.me/api/portraits/women/47.jpg",
   },
+  {
+    name: "Aditya Verma",
+    title: "Freelance Developer",
+    text: "Their UI/UX design for my client project was simply next-level. Smooth transitions, neat layouts, and a premium finish — highly recommended!",
+    img: "https://randomuser.me/api/portraits/men/73.jpg",
+  },
+  {
+    name: "Neha Kapoor",
+    title: "Brand Consultant",
+    text: "They built a visually stunning website for my client. I loved how they balanced creativity and usability — exactly what good design should be!",
+    img: "https://randomuser.me/api/portraits/women/54.jpg",
+  },
+
 ];
 
 export default function TestimonialSection() {
