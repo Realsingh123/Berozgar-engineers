@@ -1,5 +1,4 @@
 import React from "react";
-import phoneMockup from "../assets/phone-mockup.png";
 import Mockup3 from "../assets/mockup3.png";
 import customerReview from "../assets/customer-review.png";
 import customerService from "../assets/customer-service.png";
