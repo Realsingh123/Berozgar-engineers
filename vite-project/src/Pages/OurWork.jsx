@@ -11,6 +11,7 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     img: img1,
     color: "from-green-100 to-green-200",
+    link: "https://eduweb-clone.vercel.app/",
   },
   {
     title: "Café Aura",
@@ -32,6 +33,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     img: img4,
     color: "from-fuchsia-100 to-fuchsia-200",
+    link: "https://taxi-service-wepage.vercel.app/",
   },
 ];
 
@@ -47,8 +49,11 @@ const OurWork = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((p, i) => (
-          <div
+          <a
             key={i}
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`relative rounded-3xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 bg-gradient-to-br ${p.color}`}
           >
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
@@ -79,7 +84,7 @@ const OurWork = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
