@@ -24,29 +24,31 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 gap-20 md:gap-24 justify-center md:justify-start mt-10 md:mt-0">
           <ul className="space-y-6 text-sm font-medium">
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Work With Us</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Advertise With Us</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Support Us</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Business Advices</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Home</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">About us</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Why choose us</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Our work</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Testimonials</li>
+
           </ul>
           <ul className="space-y-6 text-sm font-medium">
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Private Coaching</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Our Work</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Our Commitment</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Our Team</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Front end development</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">UI/UX design</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Branding</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Technologies</li>
           </ul>
         </div>
         <div className="flex justify-center md:justify-start mt-10 lg:mt-0">
           <ul className="space-y-6 text-sm font-medium">
-            <li className="hover:text-[#487BFF] cursor-pointer transition">About Us</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">FAQs</li>
-            <li className="hover:text-[#487BFF] cursor-pointer transition">Report a Bug</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">FAQS</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Start your Journey</li>
+            <li className="hover:text-[#487BFF] cursor-pointer transition">Contact us</li>
           </ul>
         </div>
       </div>
       <div className="bg-black text-white text-xs">
         <div className="max-w-7xl mx-auto px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
-          <p>© 2025 Logo Inc. - All Rights Reserved</p>
+          <p>© 2025 Ignite solutions. - All Rights Reserved</p>
           <div className="flex space-x-6 mt-3 md:mt-0">
             <a href="#" className="hover:underline">Terms of Use</a>
             <a href="#" className="hover:underline">Privacy Policy</a>

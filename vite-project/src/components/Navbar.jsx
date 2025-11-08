@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import logoImg from "../assets/tpLogo.png";
 import emailjs from "emailjs-com";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const SERVICE_ID = "service_9teojkc";
 const TEMPLATE_ID = "template_gn1u8ie";
@@ -60,18 +62,39 @@ const Navbar = () => {
           >
             Our Work
           </li>
-          <li className="text-lg hover:text-blue-600 cursor-pointer transition">
-            Pricing
+          <li className="text-lg hover:text-blue-600 cursor-pointer transition"
+           onClick={() => {
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            Services
+          </li>
+          <li className="text-lg hover:text-blue-600 cursor-pointer transition"
+               onClick={() => {
+              const section = document.getElementById("Technologies");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+          
+            Technologies
+          </li>
+          <li className="text-lg hover:text-blue-600 cursor-pointer transition"
+
+            onClick={() => {
+              const section = document.getElementById("Testimonials");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            Testimonials
           </li>
           <li className="text-lg hover:text-blue-600 cursor-pointer transition">
-            About Us
+            <Link to="/About"> About Us</Link>
+            
           </li>
         </ul>
         <button
           onClick={() => setShowForm(true)}
           className="hidden md:block bg-[#487BFF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#3763e2] transition"
         >
-          Book A Call
+          Let's Talk
         </button>
         <div className="md:hidden flex items-center">
           <button

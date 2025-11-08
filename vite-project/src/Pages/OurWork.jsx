@@ -39,13 +39,26 @@ const projects = [
 
 const OurWork = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-20 px-6">
-      <div className="text-left mb-14">
+    <section className="w-full max-w-6xl mx-auto py-20 px-6" id="our-work">
+      {/* <div className="text-left mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Stellar Projects
         </h2>
         <p className="text-gray-500 text-base mt-1">A Glimpse of Our Work</p>
-      </div>
+      </div> */}
+
+       <div className="relative text-center z-10 mb-16">
+      <p className="text-blue-600 font-semibold uppercase tracking-wide mb-2">
+       Our work
+      </p>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        A <span className="text-blue-600">Glimpse</span> Of our work
+      </h2>
+      {/* <p className="text-gray-600 mt-4 text-base md:text-lg max-w-2xl mx-auto">
+        We deliver high-quality digital solutions that combine creativity,
+        strategy, and technology — helping businesses grow and stand out.
+      </p> */}
+    </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((p, i) => (

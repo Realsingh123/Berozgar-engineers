@@ -1,62 +1,56 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
     name: "Aarav Mehta",
-    title: "Content Creator",
-    text: "Their thumbnail designs completely changed the look of my YouTube channel. Each one perfectly captures the vibe of my videos — eye-catching yet professional!",
-    img: "https://randomuser.me/api/portraits/men/75.jpg",
+    title: "Digital Marketer, Mumbai",
+    text: "The website they built for our agency truly elevated our online presence. The animations, layout, and responsiveness were spot on — professional yet modern!",
+    img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian male
   },
   {
-    name: "Priya Sharma",
-    title: "Marketing Manager",
-    text: "Working with them on our website redesign was an absolute pleasure. The UI/UX feels smooth and intuitive — our clients noticed the difference immediately!",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Sneha Reddy",
+    title: "Fashion Blogger, Hyderabad",
+    text: "Their team perfectly understood my brand tone. The portfolio site they designed reflects my personality — elegant, colorful, and smooth to navigate!",
+    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian female
   },
   {
-    name: "Rohan Gupta",
-    title: "Startup Founder",
-    text: "From color schemes to layout, their website design nailed everything. My brand looks more premium now, and conversions have improved too!",
-    img: "https://randomuser.me/api/portraits/men/67.jpg",
+    name: "Rohit Singh",
+    title: "Startup Founder, Bengaluru",
+    text: "We needed a modern landing page for our SaaS product, and they absolutely nailed it. The conversions improved drastically after launch. Great job!",
+    img: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian male
   },
   {
-    name: "Isha Patel",
-    title: "YouTuber & Influencer",
-    text: "They completely understood my brand aesthetic. Every thumbnail they created felt lively and on point — super reliable and creative team!",
-    img: "https://randomuser.me/api/portraits/women/47.jpg",
+    name: "Aditi Chauhan",
+    title: "YouTuber & Content Strategist, Delhi",
+    text: "They handled my entire YouTube brand revamp — from thumbnails to channel design. Every piece felt fresh, lively, and 100% on-brand!",
+    img: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian female
   },
   {
-    name: "Aditya Verma",
-    title: "Freelance Developer",
-    text: "Their UI/UX design for my client project was simply next-level. Smooth transitions, neat layouts, and a premium finish — highly recommended!",
-    img: "https://randomuser.me/api/portraits/men/73.jpg",
+    name: "Kunal Verma",
+    title: "Freelance App Developer, Pune",
+    text: "The UI/UX mockups they delivered made my client presentation stand out. Clean, minimal, and very user-friendly. Worth every rupee!",
+    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian male
   },
   {
     name: "Neha Kapoor",
-    title: "Brand Consultant",
-    text: "They built a visually stunning website for my client. I loved how they balanced creativity and usability — exactly what good design should be!",
-    img: "https://randomuser.me/api/portraits/women/54.jpg",
+    title: "Brand Consultant, Gurgaon",
+    text: "I was amazed by how smoothly the project went. They combined creativity with strong communication — the final design was stunning and functional!",
+    img: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian female
   },
-
 ];
 
 export default function TestimonialSection() {
   const [index, setIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(3); // desktop default
+  const [visibleCount, setVisibleCount] = useState(3);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setVisibleCount(1); // mobile
-      } else if (window.innerWidth < 1024) {
-        setVisibleCount(2); // tablet
-      } else {
-        setVisibleCount(3); // desktop
-      }
+      if (window.innerWidth < 768) setVisibleCount(1);
+      else if (window.innerWidth < 1024) setVisibleCount(2);
+      else setVisibleCount(3);
     };
-
-    handleResize(); // run once
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -79,55 +73,73 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="py-16 bg-white text-center relative px-4 sm:px-8">
-      {/* Header with navigation beside (centered and responsive) */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-14 mb-10 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-black">
-          What Our Clients Said About Us
-        </h2>
+    <section
+      className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-24 px-6 md:px-12 lg:px-20 overflow-hidden"
+      id="Testimonials"
+    >
+      {/* Gradient Orbs */}
+      <div className="absolute top-0 left-1/3 w-[350px] h-[350px] bg-blue-100 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] bg-pink-100 rounded-full blur-3xl opacity-40"></div>
 
-        {/* Navigation Buttons beside heading */}
-        <div className="flex gap-3">
+      {/* Header */}
+      <div className="relative flex flex-col items-center text-center z-10 mb-16">
+        <p className="text-blue-600 font-semibold uppercase tracking-wide mb-2">
+          Testimonials
+        </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          What Our <span className="text-blue-600">Clients Say</span> About Us
+        </h2>
+        <p className="text-gray-600 mt-4 text-base md:text-lg max-w-2xl">
+          Hear from Indian creators, founders, and professionals who trusted us
+          with their digital transformation.
+        </p>
+
+        {/* Navigation */}
+        <div className="flex gap-4 mt-8">
           <button
             onClick={prevTestimonial}
-            className="bg-gray-200 hover:bg-[#487BFF] hover:text-white active:bg-[#487BFF] p-3 rounded-full transition"
+            className="p-3 rounded-full bg-white shadow-md border border-gray-200 hover:bg-blue-600 hover:text-white transition-all duration-300"
           >
-            <ArrowLeft size={18} />
+            <ArrowLeft size={20} />
           </button>
           <button
             onClick={nextTestimonial}
-            className="bg-gray-200 hover:bg-[#487BFF] hover:text-white active:bg-[#487BFF] p-3 rounded-full transition"
+            className="p-3 rounded-full bg-white shadow-md border border-gray-200 hover:bg-blue-600 hover:text-white transition-all duration-300"
           >
-            <ArrowRight size={18} />
+            <ArrowRight size={20} />
           </button>
         </div>
       </div>
 
-      {/* Testimonials Container */}
-      <div className="flex justify-center items-stretch gap-6 flex-wrap md:flex-nowrap transition-all duration-500">
+      {/* Testimonials */}
+      <div className="relative flex justify-center items-stretch gap-6 flex-wrap md:flex-nowrap transition-all duration-500 z-10">
         {visibleTestimonials.map((t, i) => (
           <div
             key={i}
-            className="flex flex-col justify-between 
-        w-full sm:w-[85%] md:w-[270px] lg:w-[300px] 
-        bg-[#f9f9f9] text-gray-800 p-6 rounded-2xl shadow-md 
-        hover:bg-[#487BFF] hover:text-white 
-        transition-all duration-300 h-full min-h-[290px]
-        active:bg-[#487BFF] active:text-white" // enables hover-like effect on mobile tap
+            className="relative flex flex-col justify-between bg-white border border-gray-100 shadow-md rounded-2xl p-8 w-full sm:w-[80%] md:w-[290px] lg:w-[320px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group"
           >
+            {/* Quote Icon */}
+            <div className="absolute top-5 right-5 text-blue-100 group-hover:text-blue-300 transition-all">
+              <Quote size={32} />
+            </div>
+
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-4 mb-5">
                 <img
                   src={t.img}
                   alt={t.name}
-                  className="w-12 h-12 rounded-full border-2 border-white object-cover"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-sm"
                 />
-                <div>
-                  <h3 className="font-semibold text-lg">{t.name}</h3>
-                  <p className="text-sm opacity-80">{t.title}</p>
+                <div className="text-left">
+                  <h3 className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {t.name}
+                  </h3>
+                  <p className="text-sm text-gray-500">{t.title}</p>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed">{t.text}</p>
+              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-800 transition-all duration-300">
+                {t.text}
+              </p>
             </div>
           </div>
         ))}
