@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Aarav Mehta",
+    name: "Surbhi Shetty",
     title: "Digital Marketer, Mumbai",
     text: "The website they built for our agency truly elevated our online presence. The animations, layout, and responsiveness were spot on — professional yet modern!",
     img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400", // Indian male

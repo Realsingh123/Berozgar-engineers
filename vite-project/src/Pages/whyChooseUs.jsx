@@ -1,42 +1,42 @@
 import React from "react";
 import Mockup3 from "../assets/mockup3.png";
-import customerReview from "../assets/customer-review.png";
-import customerService from "../assets/customer-service.png";
-import cyberSecurity from "../assets/cyber-security.png";
-import efficiency from "../assets/efficiency.png";
+import creative from "../assets/color.png";
+import monitor from "../assets/monitor.png";
+import bulb from "../assets/bulb.png";
+import hourglass from "../assets/hourglass.png";
 import handshake from "../assets/handshake.png";
-import cloudServer from "../assets/cloud-server.png";
+import customerService from "../assets/customer-service.png";
 
 const features = [
   {
-    icon: customerReview,
-    title: "Customer Reviews",
-    description: "Genuine feedback from satisfied clients.",
+    icon: creative,
+    title: "Creative Excellence",
+    description: "Stunning designs that bring your brand to life.",
   },
   {
-    icon: customerService,
-    title: "Responsive Support",
-    description: "Prompt and friendly customer service.",
+    icon: monitor,
+    title: "Web Development Expertise",
+    description: "Modern, responsive, and high-performing websites.",
   },
   {
-    icon: cyberSecurity,
-    title: "Cyber Security",
-    description: "Advanced data protection & confidentiality.",
+    icon: bulb,
+    title: "Brand Identity Design",
+    description: "Unique logos that make your business stand out.",
   },
   {
-    icon: efficiency,
-    title: "Efficiency",
-    description: "Fast delivery & optimized results.",
+    icon: hourglass,
+    title: "Fast Turnaround",
+    description: "Delivering projects on time without compromising quality.",
   },
   {
     icon: handshake,
-    title: "Collaboration",
-    description: "Transparent partnerships and reliability.",
+    title: "Client-Centric Approach",
+    description: "We listen, collaborate, and deliver what you need",
   },
   {
-    icon: cloudServer,
-    title: "Cloud Solutions",
-    description: "Modern, scalable cloud/server support.",
+    icon: customerService,
+    title: "Ongoing Support",
+    description: "Continuous updates and maintenance after delivery.",
   },
 ];
 
