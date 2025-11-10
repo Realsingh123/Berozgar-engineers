@@ -44,7 +44,7 @@ const StartJourney = () => {
   };
 
   return (
-    <section className="w-full flex justify-center py-16 bg-gray-50 relative">
+    <section className="w-full flex justify-center py-16 bg-gray-50 relative" id="Journey">
       <div className="flex items-center justify-between w-[950px] h-[240px] px-14 py-12 rounded-3xl bg-[#1A1732] relative overflow-hidden">
         <div className="flex flex-col gap-6 z-10">
           <h2 className="text-white text-2xl font-semibold leading-snug">

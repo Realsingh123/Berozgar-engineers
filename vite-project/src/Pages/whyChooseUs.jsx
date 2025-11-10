@@ -59,14 +59,14 @@ const FeatureGrid = () => (
 );
 
 const WhyChooseUs = () => (
-  <section className="w-full max-w-6xl mx-auto py-20 px-6">
+  <section className="w-full max-w-6xl mx-auto py-20 px-6" id="why">
 
       <div className="relative text-center z-10 mb-16">
       <p className="text-blue-600 font-semibold uppercase tracking-wide mb-2">
         Why Choose Us
       </p>
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-        Trusted by <span className="text-blue-600">Clients</span> Worldwide
+        Trusted by <span className="text-blue-600">Clients</span> Nationwide
       </h2>
       <p className="text-gray-600 mt-4 text-base md:text-lg max-w-2xl mx-auto">
         We deliver high-quality digital solutions that combine creativity,

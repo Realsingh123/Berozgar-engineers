@@ -87,7 +87,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-20 bg-[#F9FAFB] relative overflow-hidden">
+    <section className="w-full flex flex-col items-center justify-center py-20 bg-[#F9FAFB] relative overflow-hidden" id="FAQ">
       <h2 className="text-3xl font-semibold text-center text-gray-900 mb-12 relative">
         Frequently Asked Questions
         <div className="w-16 h-[3px] bg-blue-600 mx-auto mt-3 rounded-full"></div>

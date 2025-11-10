@@ -81,35 +81,89 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="grid grid-cols-2 gap-20 md:gap-24 justify-center md:justify-start mt-10 md:mt-0">
           <ul className="space-y-6 text-sm font-medium">
-            <li>
-              <Link to="/" className="hover:text-[#487BFF] transition">Home</Link>
+            <li className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("Home");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+              Home
             </li>
-            <li>
-              <Link to="/About" className="hover:text-[#487BFF] transition">About Us</Link>
+
+            <li
+            className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("About-us");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+              About us
             </li>
-            <li>
-              <Link to="/WhyChooseUs" className="hover:text-[#487BFF] transition">Why Choose Us</Link>
+
+            <li 
+              className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("Why");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }} 
+            >
+              why choose us
             </li>
-            <li>
-              <Link to="/Work" className="hover:text-[#487BFF] transition">Our Work</Link>
+
+            <li
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("our-work");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }} 
+            
+            >
+              our work
             </li>
-            <li>
-              <Link to="/Testimonials" className="hover:text-[#487BFF] transition">Testimonials</Link>
+            <li
+            
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("Testimonials");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }} 
+            >
+              Testimonials
             </li>
           </ul>
 
           <ul className="space-y-6 text-sm font-medium">
-            <li>
-              <Link to="/Frontend" className="hover:text-[#487BFF] transition">Frontend Development</Link>
+            <li
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }} >
+            Frontend Development
             </li>
-            <li>
-              <Link to="/UIUX" className="hover:text-[#487BFF] transition">UI/UX Design</Link>
+            <li
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            UI/UX Design
             </li>
-            <li>
-              <Link to="/Branding" className="hover:text-[#487BFF] transition">Branding</Link>
+            <li
+            
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            Branding
             </li>
-            <li>
-              <Link to="/Technologies" className="hover:text-[#487BFF] transition">Technologies</Link>
+            <li
+            
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("Technologies");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            Technologies
             </li>
           </ul>
         </div>
@@ -117,11 +171,21 @@ const Footer = () => {
         {/* Extra Links */}
         <div className="flex justify-center md:justify-start mt-10 lg:mt-0">
           <ul className="space-y-6 text-sm font-medium">
-            <li>
-              <Link to="/FAQs" className="hover:text-[#487BFF] transition">FAQs</Link>
+            <li
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("FAQ");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            FAQs
             </li>
-            <li>
-              <Link to="/Journey" className="hover:text-[#487BFF] transition">Start Your Journey</Link>
+            <li
+             className=" hover:text-blue-600 cursor-pointer transition"
+              onClick={() => {
+              const section = document.getElementById("Journey");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}>
+            Start Your Journey
             </li>
             <li>
               <button

@@ -44,7 +44,7 @@ const HeroBrand = () => {
   };
 
   return (
-    <section className="w-full min-h-[60vh] flex justify-center items-center bg-white px-2 py-10">
+    <section className="w-full min-h-[60vh] flex justify-center items-center bg-white px-2 py-10" id="Home">
       <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row justify-between items-center min-h-[460px]">
         <div className="md:w-1/2 w-full pl-2 pt-8 md:pt-0">
           <h1
