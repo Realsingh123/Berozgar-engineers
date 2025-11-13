@@ -3,9 +3,10 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { X } from "lucide-react";
 import emailjs from "emailjs-com";
 
-const SERVICE_ID = "service_9teojkc";
-const TEMPLATE_ID = "template_gn1u8ie";
-const PUBLIC_KEY = "JAo7Y1cy48wQ_h_Lh";
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Footer = () => {
   const [showForm, setShowForm] = useState(false);
