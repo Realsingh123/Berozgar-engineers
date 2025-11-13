@@ -39,58 +39,56 @@ const projects = [
 
 const OurWork = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-20 px-6" id="our-work">
-      {/* <div className="text-left mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Stellar Projects
+    <section
+      className="w-full max-w-7xl mx-auto py-20 px-4 sm:px-8 lg:px-12"
+      id="our-work"
+    >
+      {/* Section Heading */}
+      <div className="text-center mb-16">
+        <p className="text-blue-600 font-semibold uppercase tracking-wide mb-2">
+          Our Work
+        </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          A <span className="text-blue-600">Glimpse</span> of Our Work
         </h2>
-        <p className="text-gray-500 text-base mt-1">A Glimpse of Our Work</p>
-      </div> */}
+      </div>
 
-       <div className="relative text-center z-10 mb-16">
-      <p className="text-blue-600 font-semibold uppercase tracking-wide mb-2">
-       Our work
-      </p>
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-        A <span className="text-blue-600">Glimpse</span> Of our work
-      </h2>
-      {/* <p className="text-gray-600 mt-4 text-base md:text-lg max-w-2xl mx-auto">
-        We deliver high-quality digital solutions that combine creativity,
-        strategy, and technology — helping businesses grow and stand out.
-      </p> */}
-    </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* Project Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
         {projects.map((p, i) => (
           <a
             key={i}
             href={p.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`relative rounded-3xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 bg-gradient-to-br ${p.color}`}
+            className={`relative rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br ${p.color}`}
           >
-            <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            {/* Image Layer */}
+            <div className="absolute inset-0">
               <img
                 src={p.img}
                 alt={p.title}
-                className="w-full h-full object-cover opacity-100"
+                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-white/10 to-transparent"></div>
             </div>
 
-            <div className="relative z-10 mt-44 md:mt-56">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-1">
+            {/* Content Layer */}
+            <div className="relative z-10 mt-40 sm:mt-52 md:mt-56 px-5 pb-6 text-left">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">
                 {p.title}
               </h3>
-              <p className="text-base text-gray-700 mb-3">{p.category}</p>
+              <p className="text-sm sm:text-base text-gray-700 mb-3">
+                {p.category}
+              </p>
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-sm font-medium text-gray-900">
+                <span className="text-xs sm:text-sm font-medium text-gray-900">
                   Tech Stack:
                 </span>
                 {p.tech.map((t, idx) => (
                   <span
                     key={idx}
-                    className="text-xs bg-white/80 border border-gray-300 text-gray-700 px-2 py-1 rounded-md"
+                    className="text-[11px] sm:text-xs bg-white/80 border border-gray-300 text-gray-700 px-2 py-1 rounded-md"
                   >
                     {t}
                   </span>

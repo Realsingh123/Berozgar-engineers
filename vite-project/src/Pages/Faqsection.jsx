@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "How much do you charge for a website?",
     answer:
-      "Our pricing depends on the type, size, and complexity of your project. We offer affordable packages for startups and can customize quotes as per your needs.",
+      "Our pricing depends on the type, size, and complexity of your project. We offer affordable packages and can customize quotes as per your needs.",
   },
   {
     question: "Will my website be mobile-friendly and responsive?",
@@ -87,14 +87,20 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-20 bg-[#F9FAFB] relative overflow-hidden" id="FAQ">
-      <h2 className="text-3xl font-semibold text-center text-gray-900 mb-12 relative">
+    <section
+      className="w-full flex flex-col items-center justify-center py-20 px-6 sm:px-8 bg-[#F9FAFB] relative overflow-hidden"
+      id="FAQ"
+    >
+      {/* Heading */}
+      <h2 className="text-3xl sm:text-4xl font-semibold text-center text-gray-900 mb-12 relative">
         Frequently Asked Questions
         <div className="w-16 h-[3px] bg-blue-600 mx-auto mt-3 rounded-full"></div>
       </h2>
 
-      <div className="flex items-start justify-between w-[90%] max-w-6xl px-10 py-12 rounded-3xl bg-white shadow-xl backdrop-blur-sm">
-        <div className="flex flex-col gap-6 w-[55%]">
+      {/* Main Container */}
+      <div className="flex flex-col lg:flex-row items-stretch justify-between w-full max-w-6xl bg-white shadow-xl backdrop-blur-sm rounded-3xl px-6 sm:px-10 py-10 sm:py-12 gap-10">
+        {/* Left: FAQs */}
+        <div className="flex flex-col gap-6 w-full lg:w-[55%]">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -104,7 +110,7 @@ const FaqSection = () => {
               onClick={() => toggleFaq(index)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="font-medium text-gray-900 text-[15px]">
+                <h3 className="font-medium text-gray-900 text-[15px] sm:text-base">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
@@ -122,32 +128,36 @@ const FaqSection = () => {
           ))}
         </div>
 
-        <div className="flex flex-col justify-center w-[40%] bg-gradient-to-br from-blue-600 to-blue-500 text-white p-10 rounded-2xl shadow-md">
-          <h2 className="text-2xl font-semibold mb-3">How We Can Help You?</h2>
-          <p className="text-blue-50 text-sm mb-6 leading-relaxed">
+        {/* Right: CTA Box */}
+        <div className="flex flex-col justify-center items-start lg:items-start text-center lg:text-left w-full lg:w-[40%] bg-gradient-to-br from-blue-600 to-blue-500 text-white p-8 sm:p-10 rounded-2xl shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
+            How We Can Help You?
+          </h2>
+          <p className="text-blue-50 text-sm sm:text-base mb-6 leading-relaxed">
             Let’s discuss your business goals and build something meaningful
             together. Our team is always ready to assist you with the best
             digital solutions.
           </p>
           <button
             onClick={() => setShowForm(true)}
-            className="bg-white text-blue-600 font-medium px-5 py-2.5 rounded-full w-fit hover:bg-blue-50 transition"
+            className="bg-white text-blue-600 font-medium px-6 py-2.5 rounded-full w-fit mx-auto lg:mx-0 hover:bg-blue-50 transition"
           >
             Let’s Talk
           </button>
         </div>
       </div>
 
+      {/* Popup Form */}
       {showForm && (
-        <div className="fixed inset-0 flex justify-center items-center z-50 bg-[rgba(255,255,255,0.2)] backdrop-blur-sm transition-all duration-300">
-          <div className="relative bg-white/70 backdrop-blur-xl border border-white/30 shadow-2xl p-10 rounded-3xl w-[550px] animate-[fadeIn_0.3s_ease-out]">
+        <div className="fixed inset-0 flex justify-center items-center z-50 bg-[rgba(0,0,0,0.3)] backdrop-blur-sm transition-all duration-300 px-4">
+          <div className="relative bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl p-6 sm:p-8 md:p-10 rounded-3xl w-full max-w-md sm:max-w-lg animate-[fadeIn_0.3s_ease-out]">
             <button
               onClick={() => setShowForm(false)}
               className="absolute top-4 right-4 text-gray-600 hover:text-black transition"
             >
               <X size={22} />
             </button>
-            <h3 className="text-2xl font-semibold text-[#1A1732] mb-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-[#1A1732] mb-6 text-center">
               Let’s Get Started 🚀
             </h3>
             <form
@@ -161,7 +171,7 @@ const FaqSection = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 placeholder-gray-500 text-gray-700"
               />
               <input
                 type="email"
@@ -170,7 +180,7 @@ const FaqSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 placeholder-gray-500 text-gray-700"
               />
               <input
                 type="text"
@@ -178,17 +188,16 @@ const FaqSection = () => {
                 placeholder="Company Name"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 placeholder-gray-500 text-gray-700"
               />
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className={`w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md appearance-none ${
-                  formData.service ? "text-gray-700 bg-white" : "text-gray-500"
+                className={`w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 appearance-none ${
+                  formData.service ? "text-gray-700" : "text-gray-500"
                 }`}
-                style={{ color: formData.service ? "#374151" : "#6B7280" }}
               >
                 <option value="">Select Service</option>
                 <option value="Frontend Web Development">
@@ -203,7 +212,7 @@ const FaqSection = () => {
                 placeholder="Tell us about your project..."
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 h-28 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 backdrop-blur-md placeholder-gray-500 text-gray-700"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 h-28 focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-white/80 placeholder-gray-500 text-gray-700"
               />
               <button
                 type="submit"
