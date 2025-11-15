@@ -85,18 +85,30 @@ const Technologies = () => {
 
       {/* Inline Keyframes */}
       <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-        /* Ensure marquee is smooth across devices */
-        @media (max-width: 640px) {
-          .animate-scroll {
-            animation-duration: 40s !important;
-          }
-        }
-      `}</style>
+  /* Desktop speed */
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+
+  /* Tablet speed */
+  @media (max-width: 1024px) {
+    .animate-scroll {
+      animation-duration: 15s !important;
+    }
+  }
+
+  /* Mobile speed (Small screens) */
+  @media (max-width: 640px) {
+    .animate-scroll {
+      animation-duration: 20s !important;
+    }
+  }
+`}</style>
     </section>
   );
 };
