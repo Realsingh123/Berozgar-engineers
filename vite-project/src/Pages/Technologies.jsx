@@ -59,7 +59,7 @@ const Technologies = () => {
           <div
             className="flex whitespace-nowrap animate-scroll"
             style={{
-              animation: "scroll 25s linear infinite",
+              animation: "scroll 10s linear infinite",
             }}
           >
             {duplicatedTechs.map((tech, index) => (
